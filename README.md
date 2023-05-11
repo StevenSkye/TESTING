@@ -18,5 +18,3 @@ Enter the downloaded repository
 ```
 cd VR-T12023
 ```
-
-testign
