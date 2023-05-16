@@ -5,12 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    /*
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    */
 
-
+    //to load map selection
+    public void PlayGame()
+    {
+        MapLoader.Load(MapLoader.Scene.SceneSelect);
+    }
 
     public void QuitGame()
     {
