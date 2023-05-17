@@ -15,7 +15,8 @@ public class MainMenu : MonoBehaviour
     //to load map selection
     public void PlayGame()
     {
-        MapLoader.Load(MapLoader.Scene.SceneSelect);
+        MapLoader.Load(MapLoader.Scene.BikeSelectScene);
+        //MapLoader.Load(MapLoader.Scene.SceneSelect);
     }
 
     public void QuitGame()
