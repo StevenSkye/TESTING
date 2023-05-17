@@ -7,12 +7,14 @@ public static class MapLoader
 {
     public static int targetSceneIndex;
 
-    public enum Scene // Add the scene name here when adding more scenes
+    public enum Scene // Add the scene name here when adding more scenes on the Build Settings
     {
         MainMenuScene,
         MainScene,
         SceneSelect,
-        CityScene
+        CityScene,
+        BikeSelectScene,
+        SampleScene
     }
 
     public static void Load(Scene sceneName)

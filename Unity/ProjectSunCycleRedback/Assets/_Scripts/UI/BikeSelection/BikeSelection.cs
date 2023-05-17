@@ -18,6 +18,7 @@ public class BikeSelection : MonoBehaviour
     {
         nextButton.onClick.AddListener(NextChar);
         playButton.onClick.AddListener(StartGame);
+        testButton.onClick.AddListener(testGame);
         //hide all bikes other than the first one
         for (int i = 1; i < bikes.Length; i++)
         {
@@ -45,10 +46,19 @@ public class BikeSelection : MonoBehaviour
         bikes[selectedBike].SetActive(true);
     }
 
+
     public void StartGame()
     {
         PlayerPrefs.SetInt("SelectedBike", selectedBike);
         //SceneManager.LoadScene();
+        MapLoader.Load(MapLoader.Scene.SceneSelect);
+    }
+    private void testGame()
+    {
+        PlayerPrefs.SetInt("SelectedBike", selectedBike);
+        Debug.Log("Bike now selected: " + selectedBike);
+        //SceneManager.LoadScene();
+        MapLoader.Load(MapLoader.Scene.SampleScene);
     }
 
 }
