@@ -13,7 +13,6 @@ public class LoadBike : MonoBehaviour
         Debug.Log("selected Character: " + selectedBike);
         GameObject prefab = bikeSelected[selectedBike];//set it to the corresponding bike
         //GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);//clone it (should remove)
-        //new idea
         //use for loop to identify which bike in an array is chosen
         //only hide the ones that arent chosen
         for (int i = 0; i < bikeSelected.Length; i++)
