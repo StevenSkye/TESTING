@@ -14,12 +14,26 @@ public static class MapLoader
         SceneSelect,
         CityScene,
         BikeSelectScene,
-        SampleScene
+        SampleScene,
+        LoadingScene
     }
+    private static Scene mapName;
 
     public static void Load(Scene sceneName)
     {
-        SceneManager.LoadScene(sceneName.ToString());
+        //if loading desert scene
+        if (sceneName == Scene.MainScene)
+        {
+            MapLoader.mapName = sceneName;
+            SceneManager.LoadScene(Scene.LoadingScene.ToString());//load loadingScene
+        } else
+        {
+            SceneManager.LoadScene(sceneName.ToString());
+        }
+    }
+    public static void LoadAfter()//load map after 1 frame 
+    {
+        SceneManager.LoadScene(mapName.ToString());
     }
 
 }
