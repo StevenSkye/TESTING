@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public GameObject CompleteLevelUI;
+    public GameObject MissionFailUI;
     
-    public GameObject canvas;
-    void Start()
-    {
-        
+    public void CompleteLevel (){
+
+        Debug.Log("LEVEL WON!");
+        CompleteLevelUI.SetActive(true);
+    }
+
+    public void missionfail (){
+
+        MissionFailUI.SetActive(true);
     }
 
 
-    void Update()
-    {
-        if (Input.GetKey("escape"))
-        {
-            Pause();
-        }
-    }
 
-    public void Pause()
-    {
-        canvas.gameObject.SetActive(true);
-    }
-    public void Resume()
-    {
-        canvas.gameObject.SetActive(false);
-    }
+    
 
     
 
