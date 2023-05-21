@@ -9,11 +9,44 @@ public class LoadBike : MonoBehaviour
 
     void Start()
     {
-        int selectedBike = PlayerPrefs.GetInt("SelectedBike");
+        int selectedBike = PlayerPrefs.GetInt("SelectedBike");// get chosen integer
         Debug.Log("selected Character: " + selectedBike);
-        GameObject prefab = bikeSelected[selectedBike];
-        GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        GameObject prefab = bikeSelected[selectedBike];//set it to the corresponding bike
+        //GameObject clone = Instantiate(prefab, spawnPoint.position, Quaternion.identity);//clone it (should remove)
+        //use for loop to identify which bike in an array is chosen
+        //only hide the ones that arent chosen
+        for (int i = 0; i < bikeSelected.Length; i++)
+        {
+            if (i != selectedBike)
+            {
+                bikeSelected[i].SetActive(false);//hide the not chosen bikes
+            }
+        }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
         //----------- ADD COMPONENTS HERE---------------
         //clone.AddComponent<ScriptName>();
 
@@ -30,7 +63,7 @@ public class LoadBike : MonoBehaviour
         HoverComp.hoverHeight = 1f;
         HoverComp.hoverForce = 20000f;
         HoverComp.hoverDamp = 0.5f;
-        */
+        
 
         //---------- add Bike Controls script ---------------
         BikeControls bikeControlsComp = clone.AddComponent<BikeControls>();
@@ -42,5 +75,6 @@ public class LoadBike : MonoBehaviour
 
         //add mission controller
         clone.AddComponent<MissionController>();
+        */
     }
 }
