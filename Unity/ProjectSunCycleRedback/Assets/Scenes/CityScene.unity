@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -126,6 +126,12 @@ NavMeshSettings:
 --- !u!4 &30622779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f31abf2620c9f284e8efe20fa022c33a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1803284987}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &97127754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f31abf2620c9f284e8efe20fa022c33a,
     type: 3}
   m_PrefabInstance: {fileID: 1803284987}
   m_PrefabAsset: {fileID: 0}
@@ -421,6 +427,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 504133642}
   m_CullTransparentMesh: 1
+--- !u!1 &745674482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f305b9d662b804a4e9b35a1ae7ec40e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1327603195}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &760412030
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +779,7 @@ GameObject:
   - component: {fileID: 1045623939}
   - component: {fileID: 1045623941}
   - component: {fileID: 1045623940}
+  - component: {fileID: 1045623942}
   m_Layer: 0
   m_Name: Bikes
   m_TagString: Untagged
@@ -834,6 +847,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1045623942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045623937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f629e412bbdcc74388ae713e6b7be40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bikeSelected:
+  - {fileID: 745674482}
+  - {fileID: 97127754}
+  - {fileID: 858415341}
+  spawnPoint: {fileID: 0}
 --- !u!1 &1062666564
 GameObject:
   m_ObjectHideFlags: 0
