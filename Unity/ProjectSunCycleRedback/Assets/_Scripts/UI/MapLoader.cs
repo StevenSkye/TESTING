@@ -15,7 +15,8 @@ public static class MapLoader
         CityScene,
         BikeSelectScene,
         SampleScene,
-        LoadingScene
+        LoadingScene,
+        LevelSelection
     }
     private static Scene mapName;
 

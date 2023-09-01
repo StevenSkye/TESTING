@@ -21,6 +21,12 @@ public class MenuButtons : MonoBehaviour
         SceneManager.LoadScene("LevelSelection");
     }
 
+    public void GoToBikeSelection()
+    {
+        SceneManager.LoadScene("BikeSelectScene");
+    }
+
+
     public void QuitGame()
     {
         Application.Quit();
