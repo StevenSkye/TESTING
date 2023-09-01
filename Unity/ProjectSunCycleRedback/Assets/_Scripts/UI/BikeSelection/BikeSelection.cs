@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class BikeSelection : MonoBehaviour
 {
+    //bikes
     public GameObject[] bikes;
     public int selectedBike = 0;
 
