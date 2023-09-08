@@ -12,7 +12,8 @@ public class BikeSelection : MonoBehaviour
 
     //buttons
     [SerializeField] private Button nextButton;
-    [SerializeField] private Button testButton;
+    //menuButtons.script handles return to menu
+    //[SerializeField] private Button returnButton;
     [SerializeField] private Button playButton;
 
     void Start()
@@ -22,7 +23,9 @@ public class BikeSelection : MonoBehaviour
         //this is the "select button"
         playButton.onClick.AddListener(LevelSelect);
 
-        testButton.onClick.AddListener(testGame);
+        //menuButtons.script handles return to menu
+        //returnButton.onClick.AddListener(ReturnMenu);
+
         //hide all bikes other than the first one
         for (int i = 1; i < bikes.Length; i++)
         {
@@ -58,13 +61,10 @@ public class BikeSelection : MonoBehaviour
     }
 
 
-
-    private void testGame()
-    {
-        PlayerPrefs.SetInt("SelectedBike", selectedBike);
-        Debug.Log("Bike now selected: " + selectedBike);
-        //SceneManager.LoadScene();
-        MapLoader.Load(MapLoader.Scene.SampleScene);
+    //menuButtons.script handles return to menu
+/*    private void ReturnMenu()
+    { 
+        MapLoader.Load(MapLoader.Scene.MainMenu);
     }
-
+*/
 }

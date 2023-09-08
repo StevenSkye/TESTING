@@ -9,7 +9,7 @@ public static class MapLoader
 
     public enum Scene // Add the scene name here when adding more scenes on the Build Settings
     {
-        MainMenuScene,
+        MainMenu,
         MainScene,
         SceneSelect,
         CityScene,
