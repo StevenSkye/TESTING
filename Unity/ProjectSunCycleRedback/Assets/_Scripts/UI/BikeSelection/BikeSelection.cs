@@ -11,19 +11,14 @@ public class BikeSelection : MonoBehaviour
     public int selectedBike = 0;
 
     //buttons
-    [SerializeField] private Button nextButton;
-    //menuButtons.script handles return to menu
+    //[SerializeField] private Button nextButton;
     //[SerializeField] private Button returnButton;
-    [SerializeField] private Button playButton;
+    //[SerializeField] private Button playButton;
 
     void Start()
     {
-        nextButton.onClick.AddListener(NextChar);
-
-        //this is the "select button"
-        playButton.onClick.AddListener(LevelSelect);
-
-        //menuButtons.script handles return to menu
+        //nextButton.onClick.AddListener(NextChar);
+        //playButton.onClick.AddListener(LevelSelect);
         //returnButton.onClick.AddListener(ReturnMenu);
 
         //hide all bikes other than the first one
@@ -33,7 +28,7 @@ public class BikeSelection : MonoBehaviour
         }
     }
 
-    private void NextChar()//go to next bike
+    public void NextChar()//go to next bike
     {
         bikes[selectedBike].SetActive(false);
         selectedBike = (selectedBike + 1) % bikes.Length;
@@ -41,7 +36,7 @@ public class BikeSelection : MonoBehaviour
         bikes[selectedBike].SetActive(true);
     }
 
-    private void PrevChar()//goes to previous bike
+    public void PrevChar()//goes to previous bike
     {
         bikes[selectedBike].SetActive(false);
         selectedBike--;
@@ -57,14 +52,7 @@ public class BikeSelection : MonoBehaviour
     public void LevelSelect()
     {
         PlayerPrefs.SetInt("SelectedBike", selectedBike);
-        MapLoader.Load(MapLoader.Scene.LevelSelection);
+        SceneManager.LoadScene("LevelSelection");
     }
 
-
-    //menuButtons.script handles return to menu
-/*    private void ReturnMenu()
-    { 
-        MapLoader.Load(MapLoader.Scene.MainMenu);
-    }
-*/
 }

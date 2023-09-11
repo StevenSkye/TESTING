@@ -501,7 +501,6 @@ GameObject:
   - component: {fileID: 378430996}
   - component: {fileID: 378430995}
   - component: {fileID: 378430994}
-  - component: {fileID: 378430998}
   - component: {fileID: 378430997}
   m_Layer: 5
   m_Name: gotoMapSelection
@@ -573,7 +572,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 378430995}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764693623}
+        m_TargetAssemblyTypeName: BikeSelection, Assembly-CSharp
+        m_MethodName: LevelSelect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &378430995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -624,22 +635,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a93097eedf5b7b043aa7ff00f641e108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &378430998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378430992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d914e53bc9347948a50eb0cb81bffe7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bikes: []
-  selectedBike: 0
-  nextButton: {fileID: 0}
-  playButton: {fileID: 0}
 --- !u!1001 &424647187
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -989,7 +984,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 695047028}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 764693623}
+        m_TargetAssemblyTypeName: BikeSelection, Assembly-CSharp
+        m_MethodName: NextChar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &695047028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1079,8 +1086,6 @@ MonoBehaviour:
   - {fileID: 1039004324}
   - {fileID: 1928347051}
   selectedBike: 0
-  nextButton: {fileID: 695047027}
-  playButton: {fileID: 378430994}
 --- !u!1 &1039004324 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f31abf2620c9f284e8efe20fa022c33a,
