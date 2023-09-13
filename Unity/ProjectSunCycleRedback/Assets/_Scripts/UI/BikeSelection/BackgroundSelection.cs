@@ -45,6 +45,6 @@ public class BackgroundSelection : MonoBehaviour
 
     public void updateBackgroundText(int currentBackgroundIndex)
     {
-        currentBackground.text = "Current Background: " + backgroundNames[currentBackgroundIndex];
+        currentBackground.text = "Background: " + backgroundNames[currentBackgroundIndex];
     }
 }
