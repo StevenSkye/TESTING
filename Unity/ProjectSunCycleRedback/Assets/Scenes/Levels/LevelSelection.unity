@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 581e8d7fda774fc48a1a7900b1bf73a7,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -162,7 +163,7 @@ RectTransform:
   m_Children:
   - {fileID: 1580466789}
   m_Father: {fileID: 1251812078}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -443,7 +444,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.951275, g: 0.9528302, b: 0.92046994, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -506,7 +507,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 15.1, y: -2.2, z: -12.8}
 --- !u!224 &732983698 stripped
 RectTransform:
@@ -859,7 +860,7 @@ MonoBehaviour:
   sun: {fileID: 1195303182}
   sunColor:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.9811321, g: 0.91173184, b: 0.6238519, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -895,7 +896,7 @@ MonoBehaviour:
   moon: {fileID: 707681740}
   moonColor:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
+    key0: {r: 0.1981132, g: 0.15213598, b: 0.17042987, a: 1}
     key1: {r: 1, g: 1, b: 1, a: 1}
     key2: {r: 0, g: 0, b: 0, a: 0}
     key3: {r: 0, g: 0, b: 0, a: 0}
@@ -952,7 +953,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1195303181
 GameObject:
@@ -964,6 +965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1195303183}
   - component: {fileID: 1195303182}
+  - component: {fileID: 1195303184}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -982,7 +984,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.8679245, g: 0.8679245, b: 0.8679245, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -1040,13 +1042,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1195303181}
-  m_LocalRotation: {x: 0.19455734, y: 0.17269762, z: -0.100309536, w: 0.9603442}
-  m_LocalPosition: {x: -365.2, y: 511.4, z: -859.1}
+  m_LocalRotation: {x: -0.7068547, y: -0.018879965, z: -0.018879965, w: 0.7068547}
+  m_LocalPosition: {x: 28.890015, y: 114.29999, z: -1157.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 24.1, y: 18.7, z: -7.9}
+  m_Father: {fileID: 1251812078}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: -3.3, z: 0.24}
+--- !u!95 &1195303184
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195303181}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d320a03f5a808d4f8d21f7e1af0f9c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1251812074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1159,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1195303183}
   - {fileID: 1976833976}
   - {fileID: 1293053872}
   - {fileID: 1824298422}
@@ -1145,7 +1167,7 @@ RectTransform:
   - {fileID: 427280557}
   - {fileID: 1887503064}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1185,7 +1207,7 @@ Transform:
   - {fileID: 2115950917}
   - {fileID: 188004947}
   m_Father: {fileID: 1251812078}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322788340
 GameObject:
@@ -1333,7 +1355,7 @@ Transform:
   m_Children:
   - {fileID: 952728845}
   m_Father: {fileID: 1251812078}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1580466788
 GameObject:
@@ -1498,7 +1520,7 @@ Transform:
   m_Children:
   - {fileID: 1059877495}
   m_Father: {fileID: 1251812078}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1875194732 stripped
 RectTransform:
@@ -1673,7 +1695,7 @@ RectTransform:
   m_Children:
   - {fileID: 449339968}
   m_Father: {fileID: 1251812078}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1816,7 +1838,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1251812078}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1976833977
 MonoBehaviour:
