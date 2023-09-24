@@ -231,7 +231,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.interaction.toolkit": {
+<<<<<<< HEAD
       "version": "2.4.1",
+=======
+      "version": "2.4.3",
+>>>>>>> 9ab8647977f909f7ca385ec13d004803f2aee39b
       "depth": 0,
       "source": "registry",
       "dependencies": {
