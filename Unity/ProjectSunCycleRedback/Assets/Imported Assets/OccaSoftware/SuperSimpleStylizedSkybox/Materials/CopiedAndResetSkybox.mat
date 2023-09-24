@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 4
+  version: 7
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -23,13 +23,17 @@ Material:
   m_Name: CopiedAndResetSkybox
   m_Shader: {fileID: -6465566751694194690, guid: 99260826d72a8d543981d52b92aa0b53,
     type: 3}
-  m_ShaderKeywords: 
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -53,6 +57,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Boolean_5111d39453b2493c8f1c24b3950abef9: 1
     - Vector1_0905ee6c1e4746a4935f50fc765cc3f8: 3
@@ -72,6 +77,8 @@ Material:
     - Vector1_c60a727423244a6eb530694675f4cec8: 0.1
     - Vector1_d489d32639924d8189c0f08ece7ad279: 0.2
     - Vector1_e2fea0e22be344a383951df1b3e82f03: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
     m_Colors:
     - Color_0197f7de88654ee8b34249a3a7d8f895: {r: 0.9024564, g: 0.9250059, b: 0.9433962,
         a: 0}
