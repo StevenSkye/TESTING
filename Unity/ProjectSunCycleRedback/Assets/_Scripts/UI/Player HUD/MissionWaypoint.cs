@@ -10,42 +10,34 @@ public class MissionWaypoint : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     private void Update()
     {
-        //keep x within the width of the screen
-        float minX = img.GetPixelAdjustedRect().width / 2;
-        float maxX = Screen.width - minX;
-        //keep x within the height of the screen 
-        float minY = img.GetPixelAdjustedRect().height / 2;
-        float maxY = Screen.width - minY;
-
-        Vector2 pos = Camera.main.WorldToScreenPoint(target.position);
-
-        //behind camera
-/*        if(Vector3.Dot((target.position - transform.position), transform.forward) < 0)//if -1, target is behind player
+        if (target != null)
         {
-            if (pos.x < Screen.width / 2)
-            {//if leftside
-                pos.x = maxX;
-            }
-            else
-            {//if rightside
-                pos.x = minX;
-            }
-        }*/
+            // Keep x within the width of the screen
+            float minX = img.GetPixelAdjustedRect().width / 2;
+            float maxX = Screen.width - minX;
 
-        //consistantly change position
-        pos.x = Mathf.Clamp(pos.x, minX, maxX);
-        pos.y = Mathf.Clamp(pos.y, minY, maxY);
-        img.transform.position = pos;
+            // Keep y within the height of the screen
+            float minY = img.GetPixelAdjustedRect().height / 2;
+            float maxY = Screen.height - minY;
 
+            // Find the camera associated with your XR setup (adjust the tag accordingly)
+            Camera xrCamera = Camera.main; // Replace with your XR camera finding logic
+
+            if (xrCamera != null)
+            {
+                Vector2 pos = xrCamera.WorldToScreenPoint(target.position);
+
+                // Consistently change position
+                pos.x = Mathf.Clamp(pos.x, minX, maxX);
+                pos.y = Mathf.Clamp(pos.y, minY, maxY);
+                img.transform.position = pos;
+            }
+        }
     }
-
-
-    // Start is called before the first frame update
-
 
 }
